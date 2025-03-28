@@ -31,7 +31,7 @@ const formSchema = z.object({
 
 })
 
-const page = () => {
+const Page = () => {
   const [passwordType, setPasswordType] = useState<"text" | "password">("password");
   const [isLoading,setIsLoading]=useState(false)
   const dispatch=useDispatch()
@@ -132,4 +132,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page
