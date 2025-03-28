@@ -66,6 +66,8 @@ const Page = () => {
         toast("User logged in")     
       }
     } catch(error){
+      toast("Incorrect password")
+
       console.log(error)
     }
     setIsLoading(false)
