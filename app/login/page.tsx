@@ -91,7 +91,7 @@ const Page = () => {
                   <MdOutlineEmail className='text-lg text-neutral-900 ml-2'/>
                   
                   <FormControl>
-                    <Input placeholder="johndoe@gmail.com" {...field} className='outline-none border-none'/>
+                    <Input placeholder="johndoe@gmail.com" {...field} className='outline-none border-none focus:bg-neutral-300'/>
                   </FormControl>
                 </div>
                 

@@ -32,7 +32,7 @@ export const POST =async(request:Request)=>{
                 id:userData._id,
             }
             const token =jwt.sign(payload,process.env.JWT_KEY!,{
-                expiresIn:"1m"
+                expiresIn:"5m"
             })
 
             userData.token=token;

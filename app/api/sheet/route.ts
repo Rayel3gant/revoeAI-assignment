@@ -45,13 +45,17 @@ export const GET = async () => {
       }),
       { status: 200 }
     );
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error('Error in Sheets API:', error);
+
+    // Check if the error is an instance of Error
+    const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+
     return new NextResponse(
       JSON.stringify({
         success: false,
         message: 'Error in Sheets API',
-        error: error.message,
+        error: errorMessage,
       }),
       { status: 500 }
     );
